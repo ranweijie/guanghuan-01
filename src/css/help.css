@@ -1,0 +1,34 @@
+
+/**/
+
+
+.help-content-container{
+	margin-top:1rem;
+	border:1px solid #e5e4e3;
+	background-color:#f8f8f8;
+	height:4rem;
+	color:#636363;
+}
+.help-issue-item{
+	width:90%;
+	margin:0 auto;
+}
+.help-issue-item>div:nth-child(1){
+	float:left;
+	height:4rem;
+	font-size:1rem;
+	line-height:4rem;
+}
+.help-issue-item>div:nth-child(2){
+	float:right;
+	height:4rem;
+	font-size:1rem;
+	line-height:4rem;
+	text-align:right;
+}
+.help-issue-item>div:nth-child(1)>i{
+	color:#47a8ef;
+}
+.help-issue-item>div:nth-child(2)>i{
+	margin-right: 0;
+}

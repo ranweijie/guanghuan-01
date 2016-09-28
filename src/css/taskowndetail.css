@@ -1,0 +1,243 @@
+/*=====================任务详情页面====================*/
+
+.taskown_detail_content{
+	margin-top:1rem;
+}
+
+.taskown_taskinfo_titlebar{
+	width:100%;
+	background-color:#f8f8f8;
+	margin-top:1rem;
+	border-bottom:1px solid #e5e4e3;
+}
+/*联盟任务标题*/
+.taskown_taskinfo_item{
+	display:block;
+	width:90%;
+	height:6rem;
+	margin:0 auto;
+	text-align:left;
+}
+
+.taskown_taskinfo_item img{
+	height:65%;
+	border-radius:23%;
+	border:.5px solid #e5e4e3;
+	float:left;
+	margin-top:1rem;
+}
+.taskown_taskinfo_item div{
+	height:100%;
+	float:left;
+	font-size:1rem;
+	width:40%;
+	white-space:nowrap;
+	margin-left:.2rem;
+}
+.taskown_taskinfo_item div h2{
+	font-size:1.125rem;
+	line-height:1.6rem;
+	margin-top:1.5rem;
+	margin-bottom:0;
+	color:rgb(99, 99, 99);
+	font-weight:bold;
+	width:120%;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.taskown_taskinfo_item >div >p{
+	color:#888;
+	font-size:.7rem;
+	line-height:1.8rem;
+	width:120%;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+
+.taskown_taskinfo_item >span{
+	float:right;
+	color:red;
+	font-size:.8rem;
+	margin-top:2.1rem;
+}
+
+.taskown_taskinfo_item >span >i{
+	font-size:1.8rem;
+	font-weight:300;
+}
+
+.taskown_detail_rmbdesc{
+	margin: 0 auto;
+	width: 90%;
+	border: 1px dashed #e5e4e3;
+	border-radius: 0.5rem;
+	font-size: .8rem;
+	font-weight: 500;
+	color: gray;
+	text-align: center;
+	height:2rem;
+	line-height:1.875rem;
+}
+.taskown_detail_rmbdesc span{
+	color: red;
+}
+.taskown_detail_stepinfo{
+	background-color:#f8f8f8;
+	text-align:left;
+	border-bottom:1px solid #e5e4e3;
+}
+.taskown_detail_stepinfo>div{
+	width:90%;
+	margin:0 auto;
+}
+.taskown_detail_stepinfo>div>h4{
+	line-height:2rem;
+	letter-spacing:.1rem;
+	color:rgb(99, 99, 99);
+}
+.taskown_detail_stepinfo>div>p{
+	color:#888;
+	line-height:1.5rem;
+	margin-left:2.8rem;
+}
+.taskown_detail_stepinfo>div>p:last-child{
+	margin-bottom:.3rem;
+}
+.taskown_detail_stepinfo>div>span{
+	float:left;
+	clear:left;
+	margin-left:1rem;
+	color:#888;
+	line-height:1.5rem;
+}
+.taskown_detail_btn_container{
+	font-size: 1.1rem;
+	text-align: center;
+	background-color:#f8f8f8;
+	border-bottom:1px solid #e5e4e3;
+	padding-top:.5rem;
+}
+
+
+.taskown_detail_btnbox{
+	margin:0 auto;
+	width:90%;
+	margin-bottom:1rem;
+}
+
+
+.taskown_detail_giveup_btn{
+	height:3rem;
+	font-size:1.2rem;
+	background-color:#47a8ef;
+	color:#f0f0f0;
+	border-radius:.5rem;
+	line-height:3rem;
+	margin-top:1rem;
+}
+.taskown_btnred{
+	background-color:#ec4949;
+}
+
+.shiwanInfo{
+	width: 90%;
+	margin:0 auto;
+	height: 2rem;
+	
+}
+.shiwanInfo > span{
+	float: right;
+	font-size: .9rem;
+	line-height: 2rem;
+	color: #888;
+}
+.shiwanInfo > span>i{
+	padding-left: .2rem;
+	font-size: 1rem;
+}
+
+.giveUpBG{
+	position: fixed;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.5);
+	
+}
+.giveUpTaskTips{
+		position: absolute;
+		top: 40%;
+		left:0;
+		right: 0;
+		bottom: 0;
+		margin:0 auto;
+		width: 90%;
+		height: 8rem;
+		background-color: #f8f8f8;
+		border-radius: .5rem;
+		overflow: hidden;
+		-webkit-animation:fangda .5s;
+}
+@-webkit-keyframes fangda
+{
+	from{
+		top:0;
+	}
+	to{
+		top:40%;
+	}
+}
+.giveUpTaskTips>h4{
+	text-align: center;
+	padding: 1.5rem;
+	color: #636363;
+}
+.giveUpTaskBtn{
+	height: 3rem;
+}
+.giveUpTaskBtn>div{
+	width: 50%;
+	height: 3rem;
+	background-color: #f8f8f8;
+	border-radius: .5rem;
+	float: left;
+	display: -webkit-flex;
+	-webkit-justify-content:center;
+}
+.giveUpTaskBtn>div>button{
+	border:none;
+	height: 3rem;
+	color: #fff;
+	border-radius: .5rem;
+	font-size: 1.2rem;
+	width: 85%;
+}
+.shiwan_box{
+	text-align: left;
+	border-bottom:1px solid #e5e4e3;
+	border-top:1px solid #e5e4e3;
+	background-color: #f8f8f8;
+	padding:1rem 0 1rem 0;
+}
+.shiwan_title{
+	width: 90%;
+	margin: 0 auto;
+	font-size: 1.1rem;
+	font-weight:bold;
+	color:#888;
+	padding-bottom: 1rem;
+}
+.shiwan_content{
+	width: 90%;
+	margin: 0 auto;
+	font-size:.8rem;
+	color:#888;
+}
+#shiwanicon{
+	display: block;
+	float: right;
+	-webkit-transform: rotate(-90deg);
+}

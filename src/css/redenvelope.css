@@ -1,0 +1,262 @@
+/*签到抢红包*/
+.clear-div{
+	clear: both;
+}
+.envelope-title-bar{
+	height:3rem;
+	border-bottom:1px solid #888;
+	background-color:rgba(27, 144, 201,1);
+	position:relative;
+}
+ 
+.envelope-back{
+	float:left;
+	height:3rem;
+	line-height:3rem;
+	color:#fff;
+
+}
+.envelope-back > i{
+	font-size:2rem;
+}
+.envelope-title{
+	text-align:center;
+	text-indent:-2rem;
+	height:3rem;
+	line-height:3rem;
+	font-size:1.2rem;
+	color:#fff;
+}
+/*老虎机样式 top-img*/
+
+.laohuji-container{
+	width: 100%;
+	background-color: #ca161e;
+	padding: 0 0 .5rem 0;
+	position: relative;
+}
+
+.laohuji-top-img{
+	width: 100%;
+}
+.laohuji-top-img img:nth-child(1){
+	float: left;
+	width: 20%;
+}
+.laohuji-top-img img:nth-child(2){
+	width: 60%;
+	float: left;
+	position: absolute;
+	top: 1.5rem;
+}
+
+.laohuji-top-img img:nth-child(3){
+	width: 20%;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	float: right;
+}
+/*老虎机样式-top-count-tips*/
+.laohuji-count-tips p{
+	/*width: -webkit-calc(88% - .3rem);*/
+	width: 90%;
+	height: 2rem;
+	margin: .5rem auto;
+	line-height: 2rem;
+	text-align: center;
+	color: #aaa;
+	/*font-weight: bold;*/
+	border: 1px dashed #aaa;
+	border-radius: .5rem;
+}
+
+/*老虎机样式*/
+.laohuji-main-box{
+	width:90%;
+	margin:0 auto;
+	overflow:hidden;
+	display:flex;
+	display:-webkit-flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+}
+.laohuji-item{
+	width:30%;
+	position:relative;
+	margin-top:.8rem;
+}
+.laohuji-item > img{
+	width:100%;
+	border:2px solid #a11914;
+	border-radius:.5rem;
+}
+.laohuji-selected {
+	border:6px solid yellow !important;
+}
+.laohuji-item > span{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	color:#FCBD3F;
+	font-weight:300;
+	font-size:1.5rem;
+	text-align:center;
+	padding-top:50%;
+}
+.laohuji-item > span>i{
+	font-style:normal;
+	font-size:.8rem;
+}
+.laohuji-go{
+	/*webkit类浏览器点击效果*/
+	-webkit-tap-highlight-color:rgba(255,0,0,.3);
+}
+.laohuji-go > img{
+	border:none;
+}
+.laohuji-go > span{
+	padding-top:20%;
+	color:#ca161e;
+	font-weight:bold;
+	font-size:1.2rem;
+}
+
+/*iphone4横屏*/
+@media (min-width: 480px){
+	.laohuji-item > span{
+		font-size:1.8rem;
+	}
+
+	.laohuji-go > span{
+		font-size:1.5rem;
+	}
+}
+/*iphone6横屏*/
+@media (min-width: 667px){
+	.laohuji-item > span{
+		font-size:2.1rem;
+	}
+
+	.laohuji-go > span{
+		font-size:2rem;
+	}
+}
+/*老虎机-jihui-tips*/
+.laohuji-jihui-tips p{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: .5rem;
+	line-height: 1.5rem;
+	color: #aaa;
+}
+
+/*滚动公告*/
+.roll-board{
+	width: 88%;
+	margin: 1rem auto;
+	box-sizing:border-box;
+	padding: 1rem 0;
+	padding-left: 6%;
+	background-color:rgba(221,221,221,0.6);
+	border-radius: .5rem;
+}
+.board-container{
+	height: 7rem;
+	overflow: hidden;
+}
+/*滚动内容*/
+.roll-content1,.roll-content2{
+	width: 100%;
+	height: 7rem;
+	font-size: .9rem;
+	line-height: 1.4rem;
+	color: #777;
+}
+
+
+.give-joy-box{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color:rgba(0, 0, 0, 0.5);
+
+}
+
+.give-joy-content{
+	position:absolute;
+	top:18%;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:0 auto;
+	width:15rem;
+	height:16rem;
+	text-align:center;
+	
+	/*animation:joy 2s;*/
+	/*-webkit-animation:joy 2s;*/
+	background-image: url(http://cdn.ozhuan.com/ozhuan/img/got-prize.png);
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
+}
+
+.prize-title{
+	padding-top:.94rem;
+	color: #c72a23;
+	font-size:1.2rem;
+	font-weight: 600;
+}
+
+.prize-detail{
+	color: #fff;
+	margin-top: 2rem;
+	font-size: 1rem;
+}
+.prize-detail .prize-num{
+	font-size:4rem;
+}
+
+.prize-detail .prize-unit{
+	display: inline-block;
+	font-size:2rem;
+	margin-left: .35rem;
+}
+
+.give-joy-btn{
+	width:90%;
+	height:3rem;
+	line-height: 3rem;
+	border-radius:.5rem;
+	background-color:yellow;
+	text-align:center;
+	font-size:1.2rem;
+	font-weight: 600;
+	color:#c72a23;
+	margin:0 auto;
+	margin-top:1.5rem;
+}
+@keyframes joy{
+	0%{
+		top:-6rem;
+	};
+	100%{
+		top:40%;
+	};
+}
+@-webkit-keyframes joy{
+	0%{
+		top:-6rem;
+	};
+	100%{
+		top:40%;
+	};
+}

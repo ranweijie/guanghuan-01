@@ -1,0 +1,47 @@
+<!--任务列表模版-->
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="userinfo-change-nickbox">
+
+		<div class="userinfo-change-nickbox-item1">
+			<label>昵称</label>
+			<input type="text" placeholder="请绑定微信" name="user-nickName" maxlength="22" minlength="2" ng-model="userinfo.NickName" disabled></div>
+	</div>
+
+	<div class="userinfo-change-infobox">
+		<div class="userinfo-change-infobox-item">
+
+			<label>性别</label>
+			<select name="性别"  ng-model="userinfo.Gender">
+				<option value="男">男</option>
+				<option value="女">女</option>
+				<option value="保密">保密</option>
+			</select>
+
+		</div>
+		<div class="userinfo-change-infobox-item">
+			<label>生日</label>
+			<input type="date"     ng-model="Birthday "></div>
+		<div class="userinfo-change-infobox-item">
+			<label>职业</label>
+			<select name="职业"  ng-model="userinfo.Job">
+				<option value="学生">学生</option>
+				<option value="上班族">上班族</option>
+				<option value="老总">老总</option>
+				<option value="自由">自由</option>
+				<option value="公务员">公务员</option>
+				<option value="退休">退休</option>
+				<option value="其他">其他</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="userinfo-change-commit-btn"  ng-click="commit()" >提交保存</div>
+	
+</div>

@@ -1,0 +1,149 @@
+/*===================个人中心显示==============*/
+
+.usercenter-avatar-container{
+	height:5rem;
+	margin-top:1rem;
+	background-color:#f8f8f8;
+	border:1px solid #e5e4e3;
+}
+.usercenter-avatar-container > div{
+	width:90%;
+	margin:0 auto;
+}
+.usercenter-avatar-item1{
+	float:left;
+	width:58%;
+	height:5rem;
+	text-align:left;
+	line-height:5rem;
+	overflow:hidden;
+	color:#636363;
+}
+.usercenter-avatar-item1 > div{
+	font-size:1rem;
+}
+.usercenter-avatar-item1 > div > span{
+	font-weight:bold;
+}
+.usercenter-avatar-item2{
+	float:right;
+	height:5rem;
+	float:right;
+	text-align:center;
+}
+.usercenter-avatar-item2 img{
+	height:4rem;
+	border-radius:45%;
+	border:2px solid #fff;
+	margin-top:.4rem;
+}
+.usercenter-baishi-box{
+	margin-top:1rem;
+	border:1px solid #e5e4e3;
+	padding:1rem 0 1rem 1rem;
+	background-color:#f8f8f8;
+	letter-spacing:.1rem;
+}
+
+.usercenter-infomation-container{
+	margin:1rem auto;
+	height:10rem;
+	border:1px solid #e5e4e3;
+	background-color:#f8f8f8;
+	text-align:left;
+}
+
+.usercenter-infomation-item{
+	padding-left:1rem;
+	padding-top:1rem;
+	height:2.3rem;
+	border-bottom:1px solid #e5e4e3;
+}
+
+.usercenter-infomation-item > span{
+	font-weight:bold;
+	color:#636363;
+}
+.usercenter-infomation-item > i{
+	float:right;
+	margin-right: .9rem;
+	color:#636363;
+}
+
+.usercenter-bind-infomation-item{
+	background-color:#f8f8f8;
+	height:4rem;
+	line-height:4rem;
+	border-bottom:1px solid #e5e4e3;
+}
+.usercenter-bind-infomation-item1{
+	margin-top:1rem;
+	border-top:1px solid #e5e4e3;
+}
+.usercenter-bind-infomation-item>div{
+	width:90%;
+	margin:0 auto;
+	text-align:left;
+	color:#636363;
+}
+.usercenter-bind-infomation-item >div>span:nth-child(2){
+	font-weight:bold;
+	color:#636363;
+}
+.usercenter-bind-infomation-item >div>span:nth-child(3){
+	height:4rem;
+	float:right;
+	font-size:1rem;
+	line-height:4rem;
+	color:#636363;
+	clear:right;
+}
+.usercenter-bind-infomation-item >div>span:nth-child(3)>i{
+	margin-right: 0;
+}
+.usercenter-help{
+	width:90%;
+	height:3rem;
+	margin:1rem auto;
+	margin-bottom: 5%;
+	background-color:#47a8ef;
+	position: fixed;
+	left:5%;
+	bottom: 0;
+	text-align:center;
+	line-height:3rem;
+	border-radius:.5rem;
+	color:#f0f0f0;
+}
+.usercenter-allincome{
+	margin-top:1rem;
+	border:1px solid #e5e4e3;
+	background-color:#f8f8f8;
+	height:4rem;
+	color:#636363;
+}
+.usercenter-allincome>div{
+	width:90%;
+	margin:0 auto;
+}
+.usercenter-allincome>div>div:nth-child(1){
+	float:left;
+	height:4rem;
+	font-size:1rem;
+	line-height:4rem;
+}
+.usercenter-allincome>div>div:nth-child(2){
+	float:right;
+	height:4rem;
+	font-size:1rem;
+	line-height:4rem;
+	
+	text-align:right;
+}
+.usercenter-allincome>div>div:nth-child(2)>i{
+	margin-right: 0;
+}
+.usercenter-allincome span{
+	font-weight:bold;
+}
+

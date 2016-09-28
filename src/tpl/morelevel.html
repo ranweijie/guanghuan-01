@@ -1,0 +1,33 @@
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="morelevel-content-container">
+		
+		<!-- <div class="morelevel-content-title">---------等级说明----------</div> -->
+		<div class="morelevel-table">
+			<table align="center">
+				<thead>
+					<tr align="center">
+						<td>等级</td>
+						<td>需要收入(元)</td>
+						<td>需收徒(个)</td>
+						<td>学徒奖励</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr align="center" ng-repeat="levelItem in moreLevelDetail">
+						<td>{{::levelItem.Title}}</td>
+						<td>{{::levelItem.IncomeNeed/100}}</td>
+						<td>{{::levelItem.StudentAmountNeed}}</td>
+						<td>{{::levelItem.TeachRewardRote}}%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

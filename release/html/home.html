@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+<title>偶赚，偶来赚</title>
+</head>
+<body >
+<div style="height: 1px"></div>
+
+<div onclick="toSafari();" class="to_safari">
+<div class="tips">赚钱过程中，请保持偶赚后台运行</div>
+开始赚钱</div>
+<div class="footer"><span id="version">v1.0</span></div>
+</body>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	font-size:100%;
+	width:100%;
+	height:100%;
+}
+body{
+	 width:100%;
+	 height:100%;
+     background-color: #fff;
+     background-image:url(http://cdn.ozhuan.com/ozhuan/img/web-view-main.png);
+     background-size:60% ;
+     background-repeat:no-repeat;
+     background-position:center 20%;
+}
+.to_safari{
+	position:fixed;
+	height:3rem;
+	width:80%;
+	left:0;
+	right:0;
+	bottom:12%;
+	margin:auto;
+	text-align:center;
+	line-height:3rem;
+	border-radius:.5rem;
+	font-size:1.3rem;
+	border:2px solid #47a8ef;
+	color:#47a8ef;
+	user-select:none;  
+	-webkit-user-select:none;  
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+.tips{
+	position:absolute;
+	width:100%;
+	margin:0 auto;
+	top:-50px;
+	color:#47a8ef;
+	font-size:1rem;
+	text-align:center;
+}
+@media (max-height: 480px) {
+	.tips{
+		top:-35px;
+		font-size:.9rem;
+	}
+}
+.footer{
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	text-align: center;
+	color:#47a8ef;
+	font-size: 1rem;
+}
+</style>
+<script type="text/javascript">
+	var load = document.getElementById('loading');
+      function toSafari(){var iFrame;   iFrame = document.createElement("iframe");   iFrame.setAttribute("src", "toSafari:m.ozhuan.com");   iFrame.setAttribute("style", "display:none;");   iFrame.setAttribute("height", "0px");   iFrame.setAttribute("width", "0px");   iFrame.setAttribute("frameborder", "0");   document.body.appendChild(iFrame);    iFrame.parentNode.removeChild(iFrame);   iFrame = null; 
+      }
+	
+	  function iosCallJs(key,val){
+		  document.getElementById('version').innerHTML = "v"+val;
+	  }
+</script>
+</html>

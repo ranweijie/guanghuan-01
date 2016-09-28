@@ -1,0 +1,21 @@
+/*
+关于我们
+
+*/
+
+.abountoz-qrcode{
+	margin-top:2rem;
+	text-align:center;
+}
+
+.abountoz-qrcode>img{
+	width:60%;
+
+}
+
+.abountoz-qrcode>p{
+	font-size:1rem;
+	color:gray;
+	margin-top:.5rem;
+	letter-spacing:.1rem;
+}

@@ -1,0 +1,17 @@
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="feedback-content-container">
+		<p class="feedback-desc"> 请在下方输入您的意见或建议:</p>
+		<textarea name="feedback" class="feedback-input-box" maxlength="250" ng-model="feedbackText" placeholder="请输入,限250个字,最少10个字"> 
+		</textarea>
+		<div class="feedback-btn" ng-click="commit()">
+			提交
+		</div>
+	</div>
+</div>

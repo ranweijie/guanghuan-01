@@ -1,0 +1,30 @@
+{
+    "code": 200,
+    "message": "",
+    "data": {
+        "app_url": "http://159.203.100.126?t=1451889507&gs_url=https%3A%2F%2Fitunes.apple.com%2FWebObjects%2FMZStore.woa%2Fwa%2Fsearch%3Fmedia%3Dsoftware%26country%3DCN%26term%3D",
+        "app_size": "145M",
+        "deadline": 1451890414,
+        "steps": "1、长按虚线，拷贝关键词；<br />\r\n2、在AppStore粘贴并搜索；<br />\r\n3、找到“封神来了”,安装下载；<br />\r\n<B class='assertive'>4、打开应用，前台运行，真实体验3分钟！</B>",
+        "keyword": "封神来了",
+        "exclusive_reward": 0,
+        "exclusive_tasks": [],
+        "open_url": "comsbkapp://10?uid=31201106&tid=123155&bid=com.DuoYou.Fsgame.Appstore&timeout=3600",
+        "id": 123155,
+        "title": "封神来了(付费)",
+        "icon": "http://upload.guo7.com/e172af1b6e72c3a752bda54149747f8a.jpg",
+        "tags": [
+            0,
+            1,
+            0
+        ],
+        "reward": 3,
+        "activity": "",
+        "status_order": 1,
+        "status": 2,
+        "bid": "com.DuoYou.Fsgame.Appstore",
+        "type": 1,
+        "qty": 184,
+        "timeout": 1451893107
+    }
+}

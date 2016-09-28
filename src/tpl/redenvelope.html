@@ -1,0 +1,95 @@
+
+
+<div class="main-box-zw"></div>
+<div class="main-box-headbar">
+	<div class="main-box-back" ng-click="ozBackIndex()">
+		<i class="iconfont">&#xe614;</i>
+	</div>
+	<div class="qhb-box-title" ng-bind="title">详情</div>
+</div>
+<style id="prize-go-style"></style>
+ 
+<div class="laohuji-container">
+	<div class="laohuji-top-img">
+		<img src="http://cdn.ozhuan.com/ozhuan/img/top-img.png" alt="">
+		<img src="http://cdn.ozhuan.com/ozhuan/img/top-mid.png" alt="">
+		<img src="http://cdn.ozhuan.com/ozhuan/img/top-img.png" alt="">
+	</div>
+	<div class="clear-div"></div>
+	<div class="laohuji-count-tips">
+		<p>今日可抢红包次数：<span ng-bind="envelopeNum">0</span> 次</p>
+	</div>
+	<div class="laohuji-main-box">
+		<div class="laohuji-item" >
+			<img ng-class="{true:'laohuji-selected'}[selected === 7]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包" >
+			<span>{{::moneyNum[7]}}<i>{{::moneyUnit[7]}}</i></span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 0]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[0]}}<i>{{::moneyUnit[0]}}</i></span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 1]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[1]}}<i>{{::moneyUnit[1]}}</i></span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 6]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[6]}}<i>{{::moneyUnit[6]}}</i></span>
+		</div>
+		<div class="laohuji-item laohuji-go" ng-click="beginDraw()">
+			<img src="http://cdn.ozhuan.com/ozhuan/img/begin-darw.png" alt="抽奖">
+			<span>开始<br>抽奖</span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 2]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[2]}}<i>{{::moneyUnit[2]}}</i></span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 5]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[5]}}<i>{{::moneyUnit[5]}}</i></span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 4]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[4]}}<i>{{::moneyUnit[4]}}</i></span>
+		</div>
+		<div class="laohuji-item">
+			<img ng-class="{true:'laohuji-selected'}[selected === 3]" src="http://cdn.ozhuan.com/ozhuan/img/prize.gif" alt="红包">
+			<span>{{::moneyNum[3]}}<i>{{::moneyUnit[3]}}</i></span>
+		</div>
+	</div>
+	<div class="laohuji-jihui-tips">
+		<p>签到和完成任务即可获得抢红包机会，抢红包机会只限当天使用哦！</p>
+	</div>
+	<div class="roll-board">
+		<div class="board-container" id="roll-board">
+			<div class="roll-content1">
+				<p>走样 30秒之前抽到了1元</p>
+				<p>loveU 30秒之前抽到了2元</p>
+				<p>念佛 30秒之前抽到了1角</p>
+				<p>lookme 30秒之前抽到了1角</p>
+				<p>sandx 30秒之前抽到了10元</p>
+			</div>
+			<div class="roll-content2">
+				<p>走样 30秒之前抽到了1元</p>
+				<p>loveU 30秒之前抽到了2元</p>
+				<p>念佛 30秒之前抽到了1角</p>
+				<p>lookme 30秒之前抽到了1角</p>
+				<p>sandx 30秒之前抽到了10元</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--中奖弹出效果-->
+<div class="give-joy-box" ng-if="showJoy">
+	<div class="give-joy-content">
+		<div class="prize-title">恭喜您获得</div>
+		<div class="prize-detail">
+			<p>
+				<span ng-bind="gearsNum" class="prize-num"></span>
+				<span ng-bind="gearsUnit" class="prize-unit"></span>
+			</p>
+			<p>已存入您的账户</p>
+		</div>
+		<div class="give-joy-btn" ng-click="closeJoy()">我知道了</div>
+	</div>
+</div>

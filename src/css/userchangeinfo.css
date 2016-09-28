@@ -1,0 +1,78 @@
+/*==============个人信息修改开始=============*/
+.userinfo-change-nickbox{
+	height:5rem;
+	border:1px solid;
+	border-color:#ddd;
+	background-color:#fff;
+	font-family:inherit;
+	margin-bottom:1rem;
+	text-align:left;
+	
+}
+.userinfo-change-nickbox-item1{
+	width:100%;
+	border-bottom:1px solid;
+	border-bottom-color:#ddd;
+	margin-top:1rem;
+	float:left;
+	padding-left:1rem;
+}
+.userinfo-change-nickbox-item1 label{
+	display:inline-block;
+	font-size:1rem;
+	line-height:1rem;
+	margin-top:1.5rem;
+	
+}
+.userinfo-change-nickbox-item1 input{
+	
+	border:none;
+	-webkit-appearance: none;
+	font-size:1rem;
+}
+
+.userinfo-change-infobox{
+	border:1px solid;
+	border-color:#ddd;
+	background-color:#fff;
+	font-family:inherit;
+	margin-bottom:1rem;
+	margin-top:1rem;
+	text-align:left;
+}
+.userinfo-change-infobox-item{
+	padding-left:1rem;
+	border-bottom:1px solid;
+	border-bottom-color:#ddd;
+}
+.userinfo-change-infobox-item label{
+	display:inline-block;
+	font-size:1rem;
+	line-height:1rem;
+	margin-top:1.5rem;
+}
+.userinfo-change-infobox-item input{
+	display:inline-block;
+	border:none;
+	margin-left:1rem;
+	font-size:1rem;
+}
+.userinfo-change-infobox-item select{
+	border:none;
+	width:6.25rem;
+	margin-left:1rem;
+	font-size:1rem;
+}
+
+.userinfo-change-commit-btn{
+	width:95%;
+	margin:0 auto;
+	margin-top:1rem;
+	background-color:#47a8ef;
+	border-radius:.5rem;
+	text-align:center;
+	font-size:1rem;
+	color:#fff;
+	height:3rem;
+	line-height:3rem;
+}

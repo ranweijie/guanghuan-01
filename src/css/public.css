@@ -1,0 +1,504 @@
+
+/*公用。*/
+@charset "UTF-8";
+body{
+	-webkit-font-smoothing: antialiased;
+	font-family: STHeiti,"Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",Sans-serif;
+	-webkit-user-select:none;
+	user-select:none;
+}
+*{
+	margin: 0;padding: 0;box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+}
+/*根节点,方便使用rem*/
+html{
+	font-size: 100%; /*大部分主流浏览器是16px*/
+}
+/*平板的根大小*/
+@media (min-width: 768px){
+	html{
+		font-size: 138%;
+	}
+}
+/*iconfont字体*/
+@font-face {font-family: 'iconfont';
+    src: url('http://cdn.ozhuan.com/ozhuan/css/font/iconfont2.woff') format('woff'), /* chrome、firefox */
+    url('http://cdn.ozhuan.com/ozhuan/css/font/iconfont2.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('http://cdn.ozhuan.com/ozhuan/css/font/iconfont2.svg') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:1.2rem;font-style:normal;
+    margin-right:.5rem;
+	
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*------任务页面公用的头部---------*/
+
+.main-box-container{
+	background-color:rgb(242, 242, 242);
+	box-sizing: border-box;
+	text-align:center;
+
+}
+.main-box-headbar{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	height:2.7rem;
+	background-color:rgb(7,122,179);
+	z-index:10000;
+}
+
+.main-box-zw{
+	
+	height:2.7rem;
+	box-sizing: border-box;
+	/*border:1px solid red;*/
+}
+.main-box-back{
+	box-sizing: border-box;
+	float:left;
+	height:2.7rem;
+	line-height:2.7rem;
+	color:#fff;
+	margin-left:.5rem;
+}
+.main-box-title{
+	display:inline;
+	line-height:2.7rem;
+	color:#fff;
+	font-size:1.1rem;
+	margin-right: 1rem;
+}
+.qhb-box-title{
+	margin-right: 1rem;
+	line-height:2.7rem;
+	color:#fff;
+	font-size:1.1rem;
+	text-align:center;
+}
+.oz-detail-rmbdesc{
+	margin: 0 auto;
+	width: 90%;
+	padding: 1rem;
+	border: 0.125rem dashed red;
+	border-radius: 0.6rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: gray;
+}
+.oz-detail-rmbdesc span{
+	color: red;
+}
+
+/*ios9设置*/
+.ios9seting{
+	position:fixed;top:0;left:0;width:100%;height:100%;
+	background-color:rgba(0, 0, 0, .5);
+	z-index:99999;
+}
+
+.ios9-box{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:15rem;
+	height:18rem;
+	background-color:#fff;
+	border-radius:.5rem;
+	color:#636363;
+}
+
+.ios9-close{
+	position:absolute;
+	top:.5rem;
+	right:.5rem;
+	font-size:1.1rem;
+}
+.ios9-title{
+	height:3rem;
+	line-height:3rem;
+	font-size:1.1rem;
+	text-align:center;
+	font-weight:bold;
+	border-bottom:1px solid #e5e4e3;
+}
+.ios9-explain{
+	width:90%;
+	margin:0 auto;
+	font-size:.8rem;
+	margin-top:.2rem;
+}
+.install{
+	height:3rem;
+	background-color:#fff;
+	border:1px solid #e5e4e3;
+	overflow:hidden;
+	text-align:center;
+	line-height:3rem;
+	font-size:1rem;
+	position:relative;
+	border-radius:.5rem;
+	z-index:2;
+}
+.install > div{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:3rem;
+	background-color:#bbb;
+	z-index:1;
+	border-radius:.5rem;
+	color:#222;
+}
+.isInstall > div{
+	background-color:#47a8ef;
+	color:#fff;
+}
+.ios9-explain-bold{
+	width: 90%;
+	margin:1rem auto 0;
+	font-size: .8rem;
+	font-weight: 600;
+}
+
+.ios9-explain-to-seting{
+	position: absolute;
+	bottom: 4.35rem;
+	left: .75rem;
+	font-size: .8rem;
+}
+.ios9-toSeting{
+	position: absolute;
+	bottom: .75rem;
+	left: .75rem;
+	width:90%;
+	height:3rem;
+	margin:0 auto;
+	border-radius:.5rem;
+	text-align:center;
+	line-height:3rem;
+}
+/*微信绑定的显示*/
+
+.bind-wx-container{
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	position:fixed;
+	z-index:10000;
+	background-color:rgb(242, 242, 242);
+	overflow: scroll;
+}
+.bind_wx_title_bar{
+	position: fixed;
+	top:0;
+	left:0;
+	height:2.7rem;
+	width:100%;
+}
+.bind-wx-title{
+	/*background-image: url(/img/bg01.png);background-size: 100%;*/
+	background-color: rgba(7,122,179,1);
+	width:100%;
+	height:2.7rem;
+	line-height:2.7rem;
+	text-align:center;
+	color:#fff;
+	font-size:1.2rem;
+	padding-right: 1rem;
+}
+.bind-wx-content-container{
+	margin-top: 2.7rem;
+}
+.bind-wx-item1{
+	letter-spacing:.1rem;
+	width:95%;
+	margin:1rem auto .2rem auto;
+	color:#888;
+}
+.bind-wx-keyword{
+	width:30%;
+	height:3rem;
+	font-size:2rem;
+	line-height:3rem;
+	margin:0 auto;
+	border:1.5px dashed #e5e4e3;
+	border-radius:.5rem;
+	user-select:text;
+	-webkit-user-select:text;
+	margin-top:1rem;
+	text-align:center;
+}
+.bind-wx-qrcode{
+	width:100%;
+	text-align:center;
+}
+.bind-wx-qrcode img{
+	width:50%;
+	height:auto;
+}
+
+/*平板的根大小*/
+@media (min-width: 768px){
+	.bind-wx-qrcode img{
+		width:30%;
+		height:auto;
+	}
+}
+
+.bind-wx-towx{
+	width:95%;
+	margin:0 auto;
+	margin-top:1rem;
+	height:3rem;
+	font-size:1.2rem;
+	text-align:center;
+	background-color:#47a8ef;
+	border-radius:.5rem;
+	line-height:3rem;
+	color:#fff;
+	margin-bottom:2rem;
+}
+
+/*绑定手机*/
+
+.bind-phone-container{
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	position:fixed;
+	z-index:10000;
+	background-color:rgb(242, 242, 242);
+	overflow:scroll;
+}
+.bind-phone-title{
+	background-color: rgba(7,122,179,1);
+	width:100%;
+	height:2.7rem;
+	line-height:2.7rem;
+	text-align:center;
+	color:#fff;
+	font-size:1.2rem;
+}
+
+.bind-phone-item1,.bind-phone-item2{
+	width:90%;
+	margin:0 auto;
+	margin-top:1rem;
+	height:3rem;
+	overflow:hidden;
+	background-color:#f8f8f8;
+}
+.bind-phone-item1>input{
+	border:none;
+	width:70%;
+	height:3rem;
+	font-size:1.1rem;
+	background-color:#f8f8f8;
+	border:1px solid #e5e4e3;
+	padding-left:.2rem;
+}
+.bind-phone-item1>button{
+	width:28%;
+	height:3rem;
+	border:none;
+	float:right;
+	background-color:#f8f8f8;
+	border:1px solid #47a8ef;
+	color:#47a8ef;
+	border-radius:.5rem;
+	padding:0 .2rem;
+}
+.bind-phone-item1-disabled{
+	color:gray !important;
+	border:1px solid #e5e4e3 !important;
+}
+.bind-phone-item2>input{
+	width:100%;
+	height:3rem;
+	border:none;
+	font-size:1.1rem;
+	background-color:#f8f8f8;
+	border:1px solid #e5e4e3;
+	padding-left:.2rem;
+}
+.bind-phone-item3{
+	width:90%;
+	display:block;
+	margin:0 auto;
+	margin-top:1rem;
+	height:3rem;
+	background-color:#47a8ef;
+	border:none;
+	border-radius:.5rem;
+	text-align:center;
+	font-size:1.1rem;
+	color:#fff;
+	line-height:3rem;
+	letter-spacing:.2rem;
+
+}
+.bind-phone-item3-disabled{
+	background-color:gray;
+}
+.bind-phone-tips{
+	width:90%;
+	margin:0 auto;
+	margin-top:1rem;
+	color:#ec4949;
+	font-size:1rem;
+}
+/*无钥匙*/
+
+#appkey{
+	position:fixed;
+	top:0;left:0;width:100%;height:100%;
+	background-color:rgba(0, 0, 0, .5);
+	z-index:99999;
+}
+#hintbox{
+	position:absolute;
+	top:0;left:0;right:0;bottom:0;margin:auto;
+	width:17rem;height:13rem;
+	background-color:#f8f8f8;
+	border-radius:.5rem;
+	text-align:center;
+}
+#hintbox  p{
+	color:#aaa;
+	font-size:.8rem;
+	margin-top:.5rem;
+}
+#hintbox > h4{
+	color:#636363;	
+	display: block;
+}
+#hintbox > h5{
+	color:#636363;
+	font-size:.8rem;
+	margin-top:.5rem;
+	display: block;
+}
+.appkey_btn{
+	position:absolute;
+	bottom:.5rem;
+	width:100%;
+}
+
+.appkey_btn> button{
+	border:none;width:95%;
+	height:3rem;
+	background-color:#ec4949;
+	color:#fff;border-radius:.5rem;
+	line-height:3rem;
+	font-size:1.2rem;
+}
+.appkey_btn>p > span{
+	color:blue;
+}
+.smile{
+	width:6rem;
+	height: 3rem;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+
+/*赚..加载动画*/
+.zhuan_fixed {
+		position: fixed;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .45);
+		z-index: 10000;
+		
+	}
+	.zhuan_desc{
+		margin: 0 auto;
+		height: 20px;
+		line-height: 20px;
+		font-size: 16px;
+		color: #f8f8f8;
+		text-align: center;
+		font-weight: bold;
+		margin-top: -10px;
+	}
+	.zhuan_loading{
+		margin: 0 auto;
+		text-align: center;
+		height: 30px;
+		overflow: hidden;
+		line-height: 30px;
+	}
+	.zhuan_loading > span{
+		display: inline-block;
+		border:5px solid #7D7D7D;
+		border-radius: 50%;
+		animation-name: zhuan_loading;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-duration: 1s;
+		-webkit-animation-name: zhuan_loading;
+		-webkit-animation-fill-mode: both;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-duration: 1s;
+	}
+	.zhuan_loading > span:nth-of-type(2){
+		-webkit-animation-delay: .2s;
+	}
+	.zhuan_loading > span:nth-of-type(3){
+		-webkit-animation-delay: .4s;
+	}
+	@keyframes zhuan_loading{
+		from{
+			border:5px solid #7D7D7D;
+		}
+		to{
+			border:5px solid #fff;
+		}
+	}
+	@-webkit-keyframes zhuan_loading{
+		from{
+			border:5px solid #7D7D7D;
+		}
+		to{
+			border:5px solid #fff;
+		}
+	}
+	.zhuan_box{
+		position: absolute;
+		top:0;
+		left:0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 150px;
+		height: 150px;
+		background-color: #2B2B2B;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	.zhuan_svg {
+		width: 100px;
+		height: 100px;
+		background: #2B2B2B;
+		margin: 0 auto;
+	}

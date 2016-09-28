@@ -1,0 +1,30 @@
+<!--任务列表模版-->
+
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+		<div ng-if="descShow" class="taskincome-content-desc">
+			<span ng-bind="descText"></span>
+		</div>
+
+		<div class="taskincome-list-container">
+
+			<div class="taskincome-list-item" ng-repeat="listobj in listInfo | orderBy:'RewardTime':true">
+				<div class="taskincome-item-title">
+					<span>
+						<b ng-if="listobj.RewardLayer === 0">我</b>
+						<b ng-if="listobj.RewardLayer === 1">徒弟</b>
+						<b ng-if="listobj.RewardLayer === 2">徒孙</b>
+					</span>
+					<span ng-bind="listobj.RewardTime | toLocalTime">01月29日 12:00</span>
+				</div>
+				<div class="taskincome-item-content">通过<span ng-bind="listobj.RewardSrc"></span><c ng-bind="desctext"></c><b ng-bind="listobj.RewardAmount |  fenToYuan">2</b>元</div>
+			</div>
+		</div>
+
+</div>

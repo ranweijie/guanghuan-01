@@ -1,0 +1,73 @@
+<!--任务列表模版-->
+
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="tasklist-content-container">
+
+		<div ng-if="listObj.descShow" class="tasklist-content-desc">
+			<span ng-bind="listObj.desc"></span>
+		</div>
+
+		<div class="tasklist-list-container" style="background-color:#e5e4e3;position: relative;top:0" ng-if="listObj.listShow">
+			
+			<div class="tasklist-day-title">
+				<div>
+					<h5>每日任务</h5>
+				</div>
+			</div>
+			<div class="tasklist-day">
+				<div ng-repeat="item in everyDayTask" ng-click="goJob(item.EventType)">
+					<div class="tasklist-item" >
+						<div>
+							<i class="iconfont">&#xe612;</i><span ng-bind="item.Title">完成下载任务</span>
+						</div>
+						<div>
+							<span ng-bind="item.Reward | fenToYuan">0</span>元<i class="iconfont">&#xe613;</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tasklist-day-title">
+				<div>
+					<h5>待完成任务</h5>
+				</div>
+			</div>
+			<div class="tasklist-day">
+				<div ng-repeat="item in normalTask" ng-click="goJob(item.EventType)">
+					<div class="tasklist-item" >
+						<div>
+							<i class="iconfont">&#xe612;</i><span ng-bind="item.Title">完成下载任务</span>
+						</div>
+						<div>
+							<span ng-bind="item.Reward | fenToYuan">0</span>元<i class="iconfont">&#xe613;</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tasklist-day-title">
+				<div>
+					<h5>已完成任务</h5>
+				</div>
+			</div>
+			<div class="tasklist-day">
+				<div ng-repeat="item in compeleteTask">
+				<div class="tasklist-item tasklist-item-over" >
+					<div>
+						<i class="iconfont">&#xe612;</i><span ng-bind="item.Title">完成下载任务</span>
+					</div>
+					<div>
+						<span ng-bind="item.Reward | fenToYuan">0</span>元<i class="iconfont" style="opacity: 0;">&#xe613;</i>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<bindwx></bindwx>

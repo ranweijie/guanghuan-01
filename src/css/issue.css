@@ -1,0 +1,21 @@
+/*
+常见问题
+
+*/
+
+.issue-box{
+	background-color:#fff;
+	padding:1rem 0;
+	border-top:1px solid #e5e4e3;
+	border-bottom:1px solid #e5e4e3;
+	text-align: left;
+}
+.issue-text-item{
+	font-size:1rem;
+	color:gray;
+	width:95%;
+	margin:0 auto;
+	margin-top: 1rem;
+	line-height:1.5rem;
+	text-indent: 1.5rem;
+}

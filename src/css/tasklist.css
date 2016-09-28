@@ -1,0 +1,66 @@
+/*
+新手任务列表
+*/
+
+.tasklist-content-container{
+	background-color:#e5e4e3;
+}
+
+.tasklist-content-desc{
+	margin: 0 auto;
+	width: 90%;
+	padding: 1rem;
+	border: 0.125rem dashed gray;
+	border-radius: 0.6rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: gray;
+	text-align: center;
+}
+.tasklist-list-container{
+	color:#636363;
+}
+.tasklist-content-desc span{
+	color: gray;
+}
+
+.tasklist-day-title > div{
+	width:90%;
+	margin:0 auto;
+	text-align:left;
+	height:2rem;
+	line-height:2rem;
+	clear:left;
+}
+
+.tasklist-day>div{
+	background-color:#f8f8f8;
+	border-bottom:1px solid #e5e4e3;
+}
+
+.tasklist-item{
+	width:90%;
+	margin:0 auto;
+	height:4rem;
+	font-size:1rem;
+	line-height:4rem;
+	clear:both;
+}
+
+.tasklist-item >div:first-child{
+	float:left;
+}
+.tasklist-item >div:first-child i{
+	color:#47a8ef;
+	
+}
+.tasklist-item >div:last-child{
+	float:right;
+	color:#888;
+}
+.tasklist-item >div:last-child i{
+	margin-right: 0;
+}
+.tasklist-item-over{
+	color:#888;
+}

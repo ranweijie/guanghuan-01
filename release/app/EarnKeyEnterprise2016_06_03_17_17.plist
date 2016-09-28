@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>http://cdn.ozhuan.com/ozhuan/app/EarnKeyEnterprise2016_06_03_17_17.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>needs-shine</key>
+					<true/>
+					<key>url</key>
+					<string>http://cdn.ozhuan.com/ozhuan/app/icon.jpg</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.ozhuan.EarnKeyEnterprise</string>
+				<key>bundle-version</key>
+				<string>0.9</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>subtitle</key>
+				<string>偶赚</string>
+				<key>title</key>
+				<string>偶赚-新用户安装成功立即送2元现金，可提现</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

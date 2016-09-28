@@ -1,0 +1,28 @@
+/*
+新手教程
+
+*/
+
+.course-box{
+	background-color:#fff;
+	padding:1rem 0;
+}
+.course-text-item{
+	font-size:1rem;
+	color:gray;
+	width:95%;
+	margin:0 auto;
+	margin-top: 1rem;
+	line-height:1.5rem;
+	text-align: left;
+	text-indent: 1.5rem;
+}
+.course-text-item div{
+	margin-bottom: 1rem;
+}
+
+.course-text-item div:nth-child(1){
+	font-size: 1.2rem;
+	text-indent: 0;
+	font-weight: bold;
+}

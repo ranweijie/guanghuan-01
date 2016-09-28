@@ -1,0 +1,24 @@
+<!--任务列表模版-->
+
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+		<div ng-if="descShow" class="cashrecord-content-desc">
+			<span ng-bind="descText"></span>
+		</div>
+		<div class="cashrecord-list" ng-repeat="val in recordArray">
+			<div>
+				我在{{val.Time | toLocalTime}}时间
+			</div>
+			<div>
+				通过<b>{{val.Channel}}</b>渠道申请提现<b>{{val.Amount | fenToYuan}}</b>元。状态:<b><span ng-bind="val.status"></span></b>
+			</div>
+			
+			<br>
+		</div>
+</div>

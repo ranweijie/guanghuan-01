@@ -1,0 +1,73 @@
+
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	
+		<div  class="student-content-item1">
+			<div class="student-content-item1-list1 ">
+				<div >
+					<p ng-bind="stObj.StudentsReward">0</p>
+					<span>累计学徒奖励</span>
+				</div>
+				<div >
+					<p ng-bind="stObj.StudentAmount">0</p>
+					徒弟数量
+				</div>
+			</div>
+		</div>
+		<div  class="student-content-item1desc">
+			<div class="student-content-item1-list2">
+				<p>
+					<i class="iconfont" style="color:#47a8ef;">&#xe602;</i>今日收徒
+					<span ng-bind="stObj.TodayAmount">0</span>
+					名,合计奖励
+					<span ng-bind="stObj.TodayAllReward">0</span>
+					元
+				</p>
+			</div>
+		</div>
+		<div class="student-content-item2">
+			<div class="student-item2-list1 ">
+				<div>当前等级</div>
+				<div ng-bind="nickName"></div>
+			</div>
+		</div>
+		<div class="student-content-item2 student-item2-list1-bottom">
+			<div class="student-item2-list1 " >
+				<div>下一等级</div>
+				<div ng-bind="nextNickName"></div>
+			</div>
+		</div>
+
+		<div class="student-level-more">
+			<div  ng-click="moreLevel()">【<span>更多等级</span>】</div>
+		</div>
+		<div  class="student-content-task-desc">
+			<span ng-bind="desc"></span>
+		</div>
+		<div class="student-promocode">你的邀请码为:<span ng-bind="promoCode"></span></div>
+		<div class="student-content-fill"></div>
+</div>
+
+<div class="student-commit-btnbox">
+	<div class="student-commit-btn" ng-click="ozStSubmit()">开始收徒</div>
+</div>
+
+<div class="student-share-box" ng-if="stShow" ng-click="shareClose(1,$event)">
+	<div class="student-share-content" ng-click="shareClose(2,$event)">
+		<div class="student-share-title" >分享收徒</div>
+		<div class="student-share-btn" ng-click="shareToWx(1)">
+			<div class="student_share_wx"><i class="iconfont"  >&#xe603;</i></div>分享给微信好友
+		</div>
+		<div class="student-share-btn" ng-click="shareToWx(2)">
+			<div class="student_share_wx"><i class="iconfont" >&#xe611;</i></div>分享到微信朋友圈
+		</div>
+	</div>
+</div>
+
+<bindwx></bindwx>

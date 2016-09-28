@@ -1,0 +1,54 @@
+
+
+<div class="main-box-container">
+	<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="mywallet-item1">
+		<div class="mywallet-item1-content">
+			<div class="mywallet-item-list">
+				<p>可提现</p>
+				<p><span ng-bind="mywallet.canDrawCash  |  fenToYuan"></span>元</p>
+			</div>
+			<div class="mywallet-item-list">
+				<p>已提现</p>
+				<p><span ng-bind="mywallet.DrawCashed |  fenToYuan"></span>元</p>
+			</div>
+			<div class="mywallet-item-list">
+				<p>所有收入</p>
+				<p><span ng-bind="mywallet.allIncome |  fenToYuan"></span>元</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="mywallet-item2" ng-click="cashhistory()">
+		<div class="mywallet-item2-content">
+			<div><i class="iconfont" style="color:#47a8ef;">&#xe612;</i>提现记录</div>
+			<div><i class="iconfont">&#xe613;</i></div>
+		</div>
+	</div>
+	<div class="mywallet-item3" ng-click="taskincome()">
+		<div class="mywallet-item3-content">
+			<div  >
+			<i class="iconfont" style="color:#47a8ef;">&#xe610;</i>任务收入<span><i class="iconfont">&#xe613;</i></span>
+			</div>
+		</div>
+	</div>
+	<div class="mywallet-item3" ng-click="friendincome()">
+		<div class="mywallet-item3-content">
+			<div  ><i class="iconfont" style="color:#47a8ef;">&#xe602;</i>好友提成<span><i class="iconfont">&#xe613;</i></span>
+			</div>
+		</div>
+	</div>
+	<div class="mywallet-item3 mywallet-item-last"  ng-click="otherincome()">
+		<div class="mywallet-item3-content">
+			<div ><i class="iconfont" style="color:#47a8ef;">&#xe600;</i>其它收入<span><i class="iconfont">&#xe613;</i></span>
+			</div>
+		</div>
+	</div>
+	<div class="mywallet-cashbtn" ng-click="drawcash()">申请提现</div>
+</div>

@@ -1,0 +1,74 @@
+<!--任务列表模版-->
+
+<div class="main-box-container">
+	<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+
+		<div class="usercenter-avatar-container">
+			<div>
+				<div class="usercenter-avatar-item1">
+					<div>
+					<label><i class="iconfont" style="color:#47a8ef;">&#xe608;</i>昵称：</label>
+					<span  ng-bind="userinfo.NickName"></span>
+					</div>
+				</div>
+				<div class="usercenter-avatar-item2">
+					<img ng-src="{{userinfo.icon}}" alt="暂无头像">
+				</div>
+			</div>
+		</div>
+		<div class="usercenter-allincome" ng-click="seeDetail()">
+			<div>
+				<div>
+					<i class="iconfont" style="color:#47a8ef;">&#xe610;</i><label>余额：</label>
+					<span ng-bind="allBalance | fenToYuan">0</span><span>元</span>
+				</div>
+				<div>
+					<i class="iconfont">&#xe613;</i>
+				</div>
+			</div>
+		</div>
+<!-- 		<div class="usercenter-infomation-container" ng-click="changeinfo()">
+			<div class="usercenter-infomation-item" >
+				<label>性别：</label>
+				<span   ng-bind="userinfo.Gender"></span>
+				<i class="iconfont">&#xe613;</i>
+			</div>
+			<div class="usercenter-infomation-item">
+				<label>生日：</label>
+				<span type="date"  ng-bind="userinfo.Birthday "></span>
+				<i class="iconfont">&#xe613;</i>
+			</div>
+			<div class="usercenter-infomation-item" style="border-bottom： none">
+				<label>职业：</label>
+				<span   ng-bind="userinfo.Job"></span>
+				<i class="iconfont">&#xe613;</i>
+			</div>
+		</div>
+ -->
+		<div class="usercenter-bind-infomation-item usercenter-bind-infomation-item1" ng-click="bindPhone()">
+			<div>
+				<label><i class="iconfont" style="color:#47a8ef;">&#xe604;</i>手机号：</label>
+				<span ng-bind="userinfo.Phone"></span>
+				<span ng-if="showBindPhoneBtn"><i class="iconfont">&#xe613;</i></span>
+			</div>
+		</div>
+		<div class="usercenter-bind-infomation-item" ng-click="bindWx()">
+			<div>
+				<label><i class="iconfont" style="color:#47a8ef;">&#xe603;</i>微信号：</label>
+				<span ng-bind="userinfo.WeChat"></span>
+				<span ng-if="showBindWxBtn"><i class="iconfont">&#xe613;</i></span>
+			</div>	
+		</div>
+		<div class="usercenter-help" ng-click="help()">需要帮助?</div>
+</div>
+<!-- 绑定微信 -->
+<bindwx></bindwx>
+<!-- 绑定手机号 -->
+<bindmobile></bindmobile>
+

@@ -1,0 +1,86 @@
+
+<!--任务详情模版-->
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="taskown_detail_content">
+		<div class="taskown_detail_rmbdesc">
+			任务总金额:
+			<span ng-bind="detailObj.addRmb  | fenToYuan">1.5</span>
+			元限时+
+			<span>0</span>
+			元专属=
+			<span ng-bind="detailObj.addRmb  | fenToYuan">0</span>
+			元
+		</div>
+		<div class="taskown_taskinfo_titlebar">
+			<a class="taskown_taskinfo_item"  >
+				<img ng-src="{{AppIcon+detailObj.icon}}" >
+				<div>
+					<h2 ng-bind="detailObj.title"></h2>
+					<p style="float: left;" >大小<g ng-bind="detailObj.appSize">140M</g></p>
+				</div>
+				<span>
+					+ <i ng-bind="detailObj.addRmb  | fenToYuan">0</i>
+					元
+				</span>
+			</a>
+		</div>
+		<div class="taskown_detail_stepinfo">
+			<div>
+				<h4>任务步骤:</h4>
+				<span>1、</span><p><span>点击"去AppStore安装"，在搜索结果中;</span></p>
+				<span>2、</span><p>找到<b><span ng-bind="detailObj.title"></span></b>,安装应用;</p>
+				<span>3、</span><p><span>打开试用3分钟,获得任务奖励。</span></p>
+				<span>4、</span><p><span><g ng-bind="timeout">5</g>分钟内未成功下载并开始试用,则不能获得奖励。</span></p>
+				<span>5、</span><p><span>任务状态:<span ng-bind="taskState" style="color:#ec4949;">未获取</span></span></p>
+			</div>
+			
+		</div>
+		<div class="shiwanInfo"><span ng-click="shiwanBox()">试玩必读<i class="iconfont" id="shiwanicon">&#xe614;</i></span></div>
+		<!--试玩说明-->
+		
+		<div class="shiwan_box"  ng-show="showSWBox">
+			<div class="shiwan_title">
+				试玩说明
+			</div>
+			<div class="shiwan_content">
+				<p ng-repeat="text in shiwanInfo">{{text}}</p>
+			</div>
+		</div>
+		
+		<div class="taskown_detail_btn_container">
+		<div class="taskown_detail_btnbox">
+			<div class="taskown_detail_giveup_btn" ng-click="toAppStore(detailObj.title)" ng-show="!isComplete">
+				去AppStore安装
+			</div>
+			<div class="taskown_detail_giveup_btn taskown_btnred" ng-click="giveUpTask(detailObj.Id)" ng-show="!isComplete">
+				放弃任务
+			</div>
+			<div style="color:#636363;font-size:1.2rem;text-align:left;" ng-show="isComplete">您当前任务已完成，奖励已成功发送到你的偶赚账户中，请返回查收！</div>
+			<div class="taskown_detail_giveup_btn taskown_btnred" ng-show="isComplete" ng-click="ozBackIndex()">返回</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<!--是否放弃任务-->
+<div class="giveUpBG" ng-show="showGiveupBox">
+	<div class="giveUpTaskTips" >
+	<h4>要放弃当前任务吗？</h4>
+	<div class="giveUpTaskBtn">
+		<div>
+			<button type="button" style="background-color:#ec4949;" ng-click="giveUpTaskTrue(detailObj.Id)">确定</button>
+		</div>
+		<div>
+			<button type="button" style="background-color:#47a8ef;" ng-click="giveUpTaskFalse()">取消</button>
+		</div>
+	</div>
+	
+	</div>
+</div>

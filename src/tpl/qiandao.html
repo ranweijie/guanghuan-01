@@ -1,0 +1,41 @@
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="qiandao-content-container">
+		<div class="yyg_banner" ng-click="goYyg()"><img src="http://ensure-oz.ozhuan.com/img/banner/banner.jpg"></div>
+		<div class="sign-yearmonth-bar" >
+				<div class="sign-leftbtn" ng-click="lastMonthFun()" ng-if="lastMonth">
+					<i class="iconfont">&#xe614;</i>
+				</div>
+				<div class="sign-rightbtn" ng-click="nextMonth()" ng-if="!lastMonth">
+					<i class="iconfont">&#xe614;</i>
+				</div>
+				<div ng-bind="yearMonth" class="yearmonth"></div>
+		</div>
+		<div class="calender">
+			
+			<div class="sign-week-box">
+				<div class="sign-week-text">日</div>
+				<div class="sign-week-text">一</div>
+				<div class="sign-week-text">二</div>
+				<div class="sign-week-text">三</div>
+				<div class="sign-week-text">四</div>
+				<div class="sign-week-text">五</div>
+				<div class="sign-week-text">六</div>
+			</div>
+			<div class="sign-day">
+				<div  ng-repeat="item in jsonData" class="sign-day-text" ng-class="{true: 'signed'}[item.isSign]"  ng-bind="item.val"></div>
+			</div>
+		</div>
+		<div class="qiandao-text">
+			&nbsp;&nbsp;&nbsp;&nbsp;每天可以在此签到，签到可以获得1次抢红包机会,获得的机会只能当天使用。
+		</div>
+		<button type="button" ng-class="{true:'qiandao-btn',false:'qiandao-btn-disabled'}[!isQianDao]"  ng-bind="btnContent" ng-click="qiandao()" ng-disabled="isQianDao"></button>
+	</div>
+
+</div>

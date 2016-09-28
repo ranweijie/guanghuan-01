@@ -1,0 +1,36 @@
+
+<div class="main-box-container">
+	<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+
+		<div class="drawcash-yue">余额：<span ng-bind="drawcash.yue |  fenToYuan"></span>元</div>
+	
+		<div class="drawcash-wx-box">
+		<div class="drawcash-wx-account" ng-click="bindWx()">提现至微信帐号：<span ng-bind="drawcash.wxid"></span>
+		</div>
+		</div>
+		<div class="drawcash-inputname">
+			<input type="text" placeholder="请输入真实姓名(否则无法到账噢)" maxlength="15" ng-model="drawcashName">
+		</div>
+		<div class="drawcash-num-select-container">
+			<div class="drawcash-num" ng-repeat="(key,cashnum) in drawcashNumArray" ng-click="drawcashNum(key)">
+				<div class="drawcash-numbox-text " ng-class="{true:'drawcash-selected'}[drashSelected === key]">
+					<span ng-bind="cashnum"></span>元
+				</div>
+			</div>
+		</div>
+		<div class="drawcash-desc">您的申请大概在3个工作日内完成审核到账，请注意查收。
+		</div>
+		<div class="drawcash-commit-btn" ng-click="commit()">
+			提交
+		</div>
+</div>
+
+<!--绑定微信-->
+
+<bindwx></bindwx>

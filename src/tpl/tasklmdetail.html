@@ -1,0 +1,70 @@
+<!--任务详情模版-->
+
+<div class="main-box-container">
+<div class="main-box-zw"></div>
+	<div class="main-box-headbar">
+		<div class="main-box-back" ng-click="ozBackIndex()">
+			<i class="iconfont">&#xe614;</i>
+		</div>
+		<div class="main-box-title" ng-bind="title">详情</div>
+	</div>
+	<div class="task-detail-content">
+		<div class="task-detail-rmbdesc">
+			任务总金额:
+			<span ng-bind="detailObj.points  | fenToYuanHalve">1.5</span>
+			元限时+
+			<span>0</span>
+			元专属=
+			<span ng-bind="detailObj.points  | fenToYuanHalve">0</span>
+			元
+		</div>
+		<div class="taskdetail-taskinfo-titlebar">
+			<a class="taskdetail-taskinfo-item"  >
+				<img ng-src="{{detailObj.icon}}" >
+				<div>
+					<h2 ng-bind="detailObj.name"></h2>
+					<p style="float: left;" >大小<g ng-bind="detailObj.size"></g></p>
+				</div>
+				<span class="taskdetail-taskinfo-3rd">
+					+ <i ng-bind="detailObj.points  | fenToYuanHalve">0</i>
+					元
+				</span>
+			</a>
+		</div>
+		<div class="task-detail-stepinfo">
+			<div>
+				<h4>任务步骤:</h4>
+				<span>1、</span><p><span ng-bind="detailObj.steptext1"></span>
+				</p>
+				<span>2、</span><p><span ng-bind="detailObj.steptext2"></span></p>
+			</div>
+		</div>
+		<div class="lm_text">
+		<div >【<span ng-click="abountLm()">未收到奖励?</span>】</div>
+		</div>
+		<div class="task-detail-btn-container">
+		<div class="task-detail-btn-box">
+			<div class="taskdetail-giveup-btn" ng-click="beginTask(detailObj.id)">
+				开始任务
+			</div>
+			<div class="taskdetail-giveup-btn taskdetail-red" ng-click="giveUpTask(detailObj.id)">
+				放弃任务
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<showzhuanloading></showzhuanloading>
+<!--联盟任务说明-->
+<div class="ios9seting" ng-if="showLm" ng-click="closeLm(1,$event)">
+	<div class="lm_box" ng-click="closeLm(2,$event)">
+		<div class="lm-title">
+			联盟任务说明
+		</div>
+		<div class="lm-close" ng-click="closeLm(1,$event)">x</div>
+		<div class="lm-content">
+			<p ng-repeat="explain in noRecieveLmPrizeExplain">{{explain}}</p>
+		</div>
+	</div>
+</div>

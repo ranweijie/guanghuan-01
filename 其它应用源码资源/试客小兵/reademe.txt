@@ -1,0 +1,5 @@
+﻿电脑chrome浏览器苹果虚拟设备调试地址：http://itry.com/shike/appDetails/834878585/39872/C354904ECD43B10E9A6DACCDD7F04584?ds=r0
+
+skxbtask.html是游戏大全的任务页面源码，有长按拷贝关键词功能。
+
+skxb_before_submit.js是试客小兵提交前的表单验证方法。

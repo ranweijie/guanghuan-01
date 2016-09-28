@@ -1,0 +1,34 @@
+/*更多等级*/
+
+
+
+.morelevel-content-title{
+	color:#BBBB50;
+	text-align:center;
+	letter-spacing:.2rem;
+	overflow:hidden;
+}
+.morelevel-table{
+	margin-top:1rem;
+}
+.morelevel-table > table{
+	width:90%;
+	margin:0 auto;
+	border-top:1px solid #e5e4e3;
+	border-collapse: collapse;
+}
+
+.morelevel-table td{
+	width:22%;
+	border-bottom:1px solid #e5e4e3;
+	height:4rem;
+	font-size:1rem;
+	line-height:4rem;
+	color:#636363;
+}
+
+.morelevel-table  thead td{
+	height:4rem;
+	font-weight:bold;
+	line-height:2rem;
+}

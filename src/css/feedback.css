@@ -1,0 +1,34 @@
+/*
+一键反馈
+
+*/
+
+.feedback-desc{
+	width:90%;
+	margin:1rem auto;
+	font-size:1rem;
+	text-align:left;
+	color:#636363;
+}
+.feedback-input-box{
+	border:none;
+	background-color:#f8f8f8;
+	display:block;
+	width:90%;
+	margin:0 auto;
+	min-height:15rem;
+	font-size:1rem;
+}
+
+.feedback-btn{
+	width:90%;
+	margin:0 auto;
+	margin-top:1rem;
+	text-align:center;
+	height:3rem;
+	background-color:#0e7bef;
+	border-radius:.5rem;
+	color:#fff;
+	line-height:3rem;
+	font-size:1.1rem;
+}

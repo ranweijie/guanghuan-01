@@ -1,0 +1,150 @@
+<!--首页模版-->
+<div class="userindex-container" >
+	<div class="userindex-banner" style="background-color: rgb(7,122,179);">
+		<div class="ouzhuan_box">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 60 30" style="enable-background:new 0 0 60 30;" xml:space="preserve">
+		<g id="XMLID_17_">
+			<path id="XMLID_18_" fill="#fff" d="M5.7,24.9V13.5H3.9L7.1,3.3H11L9.5,8.1v16.9H5.7z M16.2,13.9v-1.5h-5.1V3.5H25v8.9h-5.3v1.5h5.9v11.1h-4.3
+				l0.8-2.4v-6.9h-2.4v4.9h0.8l-0.2-3.8h1.4l0.3,5.4h-7.4v-1.7h1.8v-4.9h-2.2v9.4h-3.5V13.9H16.2z M14.6,5.2V7h1.7V5.2H14.6z
+				M14.6,10.7h1.7v-2h-1.7V10.7z M19.6,5.2V7h2V5.2H19.6z M19.6,8.7v2h2v-2H19.6z"/>
+		</g>
+		<g id="XMLID_3_">
+			<path id="XMLID_4_" fill="#fff" d="M41.5,6.8l-3.8,18h-2.9l1.6-7.7h-1.2V3.7h8.4v13.5h-2.2V5.3h-4.2v7.6l1.3-6.1H41.5z M43.7,24.8h-2.9l-1.5-7
+				h2.9L43.7,24.8z M46.2,15.1l-0.6,9.8h-1.8l0.6-9.8H46.2z M56.7,6.1h-3.4v1h2.6v2.8h0.8v1.7h-0.8v2.7h-2.6v10.5h-2.9V14.3h-0.9v10.5
+				h-2.8V14.3h-2.2v-1.7h2.2v-1h-2.5V9.9h2.5V8.8h-2.2V7.1h2.2v-1h-2.5V4.3h12.6V6.1z M49.3,4h-3.6l3.6-1.7V4z M50.4,7.1v-1h-0.9v1
+				H50.4z M50.4,9.9V8.8h-0.9v1.1H50.4z M50.4,12.7v-1h-0.9v1H50.4z M55,4h-3.6L55,2.3V4z M54,8.8h-0.8v1.1H54V8.8z M54,12.7v-1h-0.8
+				v1H54z M56.7,24.8h-2.3l-0.8-9.8h2.3L56.7,24.8z"/>
+		</g>
+		</svg>
+		</div>
+	</div>
+	
+	<div class="main-box-zw"></div>
+	<!--<div class="pullRefresh" ng-bind="refreshText" id="refreshId">下拉刷新</div>-->
+	<div class="userindex-userinfo-container">
+		
+		
+		<div class="userindex-userinfo-item1">
+			<span ng-click="drawCash()">今日收益<span style="font-size: .7rem;color:#f0f0f0">（元）</span>&nbsp;</span>
+		</div>
+		<div class="userindex-userinfo-item2">
+			<div class="userindex-userinfo-item2-rmb" ng-click="drawCash()">
+				<span ng-bind="todayIncome |  fenToYuan" style="font-size: 4rem;" ng-if="(todayIncome |  fenToYuan) > 0"></span>
+				<span style="font-size: 2.6rem;color:#fff;" ng-if="(todayIncome |  fenToYuan) <= 0">竟然没有</span>
+			</div>
+			<div class="userindex-userinfo-item2-avatar" ng-click="userCenter()">
+				<img ng-src="{{userObj.base.icon}}" alt="用户头像">
+				<p><span ng-bind="userObj.base.userNickname " >未知用户</span></p>
+				<!-- <p>账户余额: <span ng-bind="userObj.allBalance |  fenToYuan" >0.00</span></p> -->
+			</div>
+			<div class="userindex-addrmb" ng-if="addrmbShow">
+				+<span ng-bind="addrmb | fenToYuan">0</span>元
+			</div>
+		</div>
+		<div class="userindex-userinfo-bottom-hr"></div>
+		<div class="userindex-rmbbox">
+			<div class="userindex-box1">
+				<div>账户余额 : <span ng-bind="userObj.economics.allBalance | fenToYuan">0</span></div>
+				<div>总共收益 : <span ng-bind="userObj.economics.allIncome | fenToYuan">0</span></div>
+			</div>
+			<div class="userindex-box2">
+				<div ng-click="drawcash()">立即提现</div>
+			</div>
+		</div>
+	</div>
+	<!--三角形锯齿分割线-->
+	<div class="userindex-taskinfo-container">
+	
+		<div class="userindex-taskinfo-box">
+			<div class="userindex-taskinfo-box-item">
+			
+				<div style="background-color:#FFCC99;" ng-click="ozXsrw()"><i class="iconfont" style="color:#fff;">&#xe616;</i></div>
+				<p>新手任务</p>
+			</div>
+			<div class="userindex-taskinfo-box-item"></div>
+			<div class="userindex-taskinfo-box-item">
+			
+				
+				<div style="background-color:#996699;" ng-click="ozQd()"><i class="iconfont" style="color:#fff;">&#xe619;</i></div>
+				<p>签到</p>
+			</div>
+			<div class="userindex-taskinfo-box-item"></div>
+			<div class="userindex-taskinfo-box-item">
+				
+				<!-- <i class="iconfont" style="color:#cc3333;">&#xe607;</i> -->
+				<div style="background-color:#993333;" ng-click="ozQhb()"><i class="iconfont" style="color:#fff;">&#xe61b;</i></div>
+				<p>抢红包</p>
+			</div>
+			<div class="userindex-taskinfo-box-item"></div>
+			<div class="userindex-taskinfo-box-item">
+			
+				<!-- <i class="iconfont" style="color:#99cc66;">&#xe602;</i> -->
+				<div style="background-color:#99cc66;" ng-click="ozStrw()"><i class="iconfont" style="color:#fff;">&#xe61a;</i></div>
+				<p>收徒任务</p>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		
+		<!--首页任务列表-->
+		<div class="userindex-taskinfo-list-container">
+			
+			<div class="userindex-taskinfo-list-box" >
+			
+			<!--己方平台进行中的任务-->
+			<a class="userindex-taskinfo-list-item" ng-click="clickAccept(listItem.Id,listItem.CheckInstalledUrl)" ng-repeat="listItem in acceptTaskInfo">
+				<img ng-src="{{AppIcon+listItem.icon}}" alt="img">
+				<div>
+					<h2 ng-bind="listItem.title"></h2>
+					<p ng-bind="listItem.desc"></p>
+				</div>
+				<span>进行中</span>
+			</a>
+			<!--己方平台未进行的任务-->
+			<a class="userindex-taskinfo-list-item" ng-click="clickNormal(listItem.Id)" ng-repeat="listItem in normalTaskInfo">
+				<img ng-src="{{AppIcon+listItem.icon}}" alt="img">
+				<div>
+					<h2 ng-bind="listItem.title"></h2>
+					<p><span class="userindex_surplus_amount">剩<span ng-bind="listItem.PutInAmount-listItem.PutOutAmount"></span>份</span></p>
+				</div>
+				<span>+<i ng-bind="listItem.addRmb | fenToYuan"></i>元</span>
+			</a>
+			<!--己方平台已完成的任务-->
+			<a class="userindex-taskinfo-list-item userindex-taskinfo-list-item-disable"  ng-repeat="listItem in completeTaskInfo">
+				<img ng-src="{{AppIcon+listItem.icon}}" alt="img">
+				<div>
+					<h2 ng-bind="listItem.title"></h2>
+					<p ng-bind="listItem.desc"></p>
+				</div>
+				<span>已完成</span>
+			</a>
+			<!--斗金平台任务,不显示超过5元的任务-->
+			<a class="userindex-taskinfo-list-item"  ng-repeat="listItem in taskList3rd" ng-if="!taskListLoaded && (listItem.douJpoints | fenToYuanHalve) <= 5 &&  (listItem.douJpoints | fenToYuanHalve) > 0" ng-click="click3rd(listItem.douJstoreID,listItem.douJname,listItem.douJIconURL,listItem.douJtaskBrief,listItem.douJpoints,listItem.DouJsize,listItem.douJtaskSteps)">
+				<img ng-src="{{listItem.douJIconURL}}" alt="img">
+				<div>
+					<h2 ng-bind="listItem.douJname"></h2>
+					<p ng-bind="listItem.douJadText"></p>
+				</div>
+				<span class="userindex-taskinfo-3rd">+<i ng-bind="listItem.douJpoints | fenToYuanHalve"></i>元</span>
+			</a>
+			<!--一元夺宝-->
+			<a class="userindex-taskinfo-list-item"  target="_blank" ng-if="!taskListLoaded || !taskListLoadedown" href="http://myyg.ozhuan.com">
+				<img src="http://cdn.ozhuan.com/ozhuan/img/yyg.png" alt="img">
+				<div>
+					<h2>一元夺宝</h2>
+					<p>一块钱，抢苹果6！</p>
+				</div>
+				<span class="userindex-taskinfo-3rd">+<i>1</i>元</span>
+			</a>
+			<div class="userindex-task-load" ng-if="taskListLoaded || taskListLoadedown" ng-bind="tasklistLoadText">
+				正在加载任务列表...
+			</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!--加载动画-->
+<showzhuanloading></showzhuanloading>
+
+

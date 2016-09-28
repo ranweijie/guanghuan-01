@@ -1,0 +1,59 @@
+
+/*任务收入详细列表*/
+.taskincome-list-container{
+	margin-top:1rem;
+	background-color:#f8f8f8;
+	overflow:hidden;
+}
+
+.taskincome-list-item{
+	height:auto;
+	width:95%;
+	border-bottom:1px solid #e5e4e3;
+	margin:0 auto;
+	color:#636363;
+}
+
+.taskincome-item-title{
+	line-height:2rem;
+}
+.taskincome-item-title span:nth-child(1){
+	float:left;
+}
+
+.taskincome-item-title span:nth-child(2){
+	float:right;
+	color:gray;
+}
+
+.taskincome-item-content{
+	clear:both;
+	color:gray;
+	line-height:2rem;
+	text-align:left;
+}
+.taskincome-item-content span {
+	color:#636363;
+	font-weight:bold;
+}
+.taskincome-item-content b {
+	color:red;
+}
+
+.taskincome-content-desc{
+	margin: 0 auto;
+	margin-top:1rem;
+	width: 90%;
+	height:3rem;
+	line-height:3rem;
+	border: 1px dashed gray;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #636363;
+	text-align: center;
+}
+
+.taskincome-content-desc span{
+	color: #636363;
+}
